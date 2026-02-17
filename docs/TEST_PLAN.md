@@ -5,6 +5,7 @@ References:
 - `SECURE_DATA_FETCHER_MVP_TECH_SPEC_V1_1.md`
 - `docs/PRODUCT.md`
 - `docs/IMPLEMENTATION_PLAN.md`
+- `docs/LOGGING_STRATEGY.md`
 
 ## 1) Purpose
 
@@ -123,6 +124,13 @@ End-to-end tests:
 - Biometric approval is required for `APPROVE`.
 - Credentials are absent from app DB records and logs.
 - WKWebView is configured as non-persistent.
+
+### 4.7 Logging Safety and Correlation
+
+- Canonical log schema validation tests pass.
+- Redaction tests prove secrets/tokens/credentials are never serialized.
+- Lifecycle logs always include `request_id`.
+- Transition events are emitted exactly once per successful state transition.
 
 ## 5) P1 Test Requirements (Pre-Release Branch)
 

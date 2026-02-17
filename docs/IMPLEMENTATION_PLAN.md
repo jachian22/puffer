@@ -4,6 +4,7 @@ Last updated: 2026-02-17
 References:
 - `SECURE_DATA_FETCHER_MVP_TECH_SPEC_V1_1.md`
 - `docs/PRODUCT.md`
+- `docs/LOGGING_STRATEGY.md`
 
 ## 1) Implementation Goals
 
@@ -57,6 +58,7 @@ Deliver:
 - broker scaffold, config loader, health endpoint
 - iOS app scaffold with tabs/screens for setup + requests + logs
 - shared constants for statuses/error codes
+- logging schema scaffold aligned to `docs/LOGGING_STRATEGY.md`
 
 Exit criteria:
 
@@ -192,6 +194,12 @@ Exit criteria:
 - Telegram content is never used as authoritative protocol input
 
 ## Milestone 10 - End-to-End Hardening and Test Matrix
+
+Logging deliverables for this milestone:
+
+- canonical transition event emission across broker and phone
+- redaction enforcement in logger wrapper
+- log schema and correlation tests integrated in CI
 
 Deliver:
 
