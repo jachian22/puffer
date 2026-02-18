@@ -145,7 +145,8 @@ Contract details (locked):
 - `POST /request`:
 - accepts optional `idempotency_key`
 - uniqueness scope `(agent_identity, idempotency_key)`
-- duplicate returns same `request_id` and current status
+- same key + same payload returns same `request_id` and current status
+- same key + different payload returns `409 IDEMPOTENCY_CONFLICT`
 
 - `POST /phone/requests/:id/decision`:
 - first valid decision wins

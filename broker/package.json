@@ -1,0 +1,17 @@
+{
+  "name": "secure-data-fetcher-broker",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "bun run src/server.ts",
+    "start": "bun run src/server.ts",
+    "migrate": "bun run src/db/migrate.ts",
+    "test": "NODE_ENV=test bun test",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@types/bun": "latest",
+    "typescript": "^5.9.2"
+  }
+}

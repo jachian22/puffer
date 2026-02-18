@@ -1,0 +1,20 @@
+# Broker artifacts
+broker/data/
+
+# Local env files
+.env
+.env.local
+broker/.env.local
+
+# Node/Bun artifacts
+node_modules/
+
+# SwiftPM / Xcode artifacts
+ios/.build/
+DerivedData/
+
+# Local test artifacts
+*.sqlite3
+*.sqlite
+*.manifest.json
+*.pdf

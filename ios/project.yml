@@ -1,0 +1,28 @@
+name: SecureDataFetcher
+options:
+  minimumXcodeGenVersion: 2.37.0
+  deploymentTarget:
+    iOS: "16.0"
+
+packages:
+  SecureDataFetcherCore:
+    path: .
+
+targets:
+  SecureDataFetcherApp:
+    type: application
+    platform: iOS
+    deploymentTarget: "16.0"
+    sources:
+      - path: App
+    info:
+      path: App/Info.plist
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.puffer.securedatafetcher
+        SWIFT_VERSION: "5.10"
+        CODE_SIGN_STYLE: Automatic
+        DEVELOPMENT_TEAM: ""
+    dependencies:
+      - package: SecureDataFetcherCore
+        product: SecureDataFetcherCore
